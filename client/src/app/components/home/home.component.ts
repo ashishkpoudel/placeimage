@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material';
+import { GenerateImageDialogComponent } from '../generate-image-dialog/generate-image-dialog.component';
 
 @Component({
   selector: 'app-home',
@@ -7,9 +8,7 @@ import {MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
-
-  name = "asdhasd";
-
+  
   constructor(private dialog: MatDialog) { }
 
   ngOnInit() {
@@ -17,7 +16,9 @@ export class HomeComponent implements OnInit {
   }
 
   handleClick() {
-    this.dialog
+    const dialogRef = this.dialog.open(GenerateImageDialogComponent, {
+      width: '200px'
+    });
   }
 
 }
