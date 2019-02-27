@@ -1,0 +1,33 @@
+
+.hero {
+	padding: 70px 0px;
+	background-color: #3f51b5;
+	text-align: center;
+}
+
+.hero h1 {
+	font-size: 42px;
+	color: #fff;
+	margin-bottom: 15px;
+}
+
+.hero h2 {
+	font-size: 15px;
+	color: #fff;
+	margin-bottom: 40px;
+}
+
+.section {
+	padding: 40px 0;
+	text-align: center;
+}
+
+.section .title::after {
+	content: "\00a0";
+	display: block;
+	width: 8%;
+	height: 2px;
+	background: #ccc;
+	margin-top: 15px;
+	margin: 30px auto;
+}
