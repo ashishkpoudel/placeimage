@@ -7,6 +7,9 @@ import { RouterModule, Routes } from '@angular/router';
 import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
 import { MatDialogModule } from '@angular/material/dialog';
+import { MatSelectModule } from '@angular/material/select';
+
+import { ColorPickerModule } from 'ngx-color-picker';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -34,8 +37,11 @@ const routes: Routes = [
     MatInputModule,
     MatButtonModule,
     MatDialogModule,
+
+    ColorPickerModule,
     RouterModule.forRoot(routes),
   ],
+  entryComponents: [GenerateImageDialogComponent],
   providers: [],
   bootstrap: [AppComponent]
 })

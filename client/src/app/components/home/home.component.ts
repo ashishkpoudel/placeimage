@@ -17,7 +17,10 @@ export class HomeComponent implements OnInit {
 
   handleClick() {
     const dialogRef = this.dialog.open(GenerateImageDialogComponent, {
-      width: '200px'
+      width: '480px',
+      position: {
+        top: '65px',
+      }
     });
   }
 
