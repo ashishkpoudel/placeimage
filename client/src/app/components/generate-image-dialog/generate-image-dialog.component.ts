@@ -1,18 +1,19 @@
 import { Component, OnInit } from '@angular/core';
-
-export interface ImageFormat {
-  value: string;
-  viewValue: string;
-}
+import { Image } from '../../models/Image';
+import { ImageFormat } from '../../models/ImageFormat';
+import { ImageUrlGenerator } from '../../services/ImageUrlGenerator';
 
 @Component({
   selector: 'app-generate-image-dialog',
   templateUrl: './generate-image-dialog.component.html',
-  styleUrls: ['./generate-image-dialog.component.css']
+  styleUrls: ['./generate-image-dialog.component.css'],
+  providers: [ImageUrlGenerator]
 })
 export class GenerateImageDialogComponent implements OnInit {
 
-  image_option = {
+  image_url = '';
+
+  image: Image = {
     width: 200,
     height: 200,
     format: 'jpg',
@@ -24,9 +25,14 @@ export class GenerateImageDialogComponent implements OnInit {
     { value: 'jpg', viewValue: 'jpg' }
   ];
 
-  constructor() { }
+  constructor(private image_url_generator: ImageUrlGenerator) { }
 
   ngOnInit() {
+  }
+
+  handleCreate() {
+    let image_url = this.image_url_generator.generate(this.image);
+    alert(image_url);
   }
 
 }

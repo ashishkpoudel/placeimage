@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 
 import { RouterModule, Routes } from '@angular/router';
 
@@ -33,13 +34,16 @@ const routes: Routes = [
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
-    AppRoutingModule,
+    FormsModule,
+
     MatInputModule,
     MatButtonModule,
     MatDialogModule,
     MatSelectModule,
-
     ColorPickerModule,
+
+    AppRoutingModule,
+   
     RouterModule.forRoot(routes),
   ],
   entryComponents: [GenerateImageDialogComponent],
