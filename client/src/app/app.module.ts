@@ -37,6 +37,7 @@ const routes: Routes = [
     MatInputModule,
     MatButtonModule,
     MatDialogModule,
+    MatSelectModule,
 
     ColorPickerModule,
     RouterModule.forRoot(routes),

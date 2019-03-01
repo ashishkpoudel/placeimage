@@ -13,8 +13,8 @@ export interface ImageFormat {
 export class GenerateImageDialogComponent implements OnInit {
 
   image_formats: ImageFormat[] = [
-    { value: 'png', viewValue: 'Png' },
-    { value: 'jpg', viewValue: 'Jpg' }
+    { value: 'png', viewValue: 'png' },
+    { value: 'jpg', viewValue: 'jpg' }
   ];
 
   constructor() { }
