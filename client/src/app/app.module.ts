@@ -19,6 +19,7 @@ import { HeaderComponent } from './components/header/header.component';
 import { SidebarComponent } from './components/sidebar/sidebar.component';
 import { GenerateImageDialogComponent } from './components/generate-image-dialog/generate-image-dialog.component';
 
+
 const routes: Routes = [
 	{ path: '', component: HomeComponent }
 ];
@@ -29,7 +30,7 @@ const routes: Routes = [
     HomeComponent,
     HeaderComponent,
     SidebarComponent,
-    GenerateImageDialogComponent
+    GenerateImageDialogComponent,
   ],
   imports: [
     BrowserModule,
