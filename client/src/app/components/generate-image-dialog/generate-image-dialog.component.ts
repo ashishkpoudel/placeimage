@@ -12,6 +12,13 @@ export interface ImageFormat {
 })
 export class GenerateImageDialogComponent implements OnInit {
 
+  image_option = {
+    width: 200,
+    height: 200,
+    format: 'jpg',
+    font_size: 16
+  };
+
   image_formats: ImageFormat[] = [
     { value: 'png', viewValue: 'png' },
     { value: 'jpg', viewValue: 'jpg' }
