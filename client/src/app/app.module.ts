@@ -17,37 +17,46 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './components/home/home.component';
 import { HeaderComponent } from './components/header/header.component';
 import { SidebarComponent } from './components/sidebar/sidebar.component';
-import { GenerateImageDialogComponent } from './components/generate-image-dialog/generate-image-dialog.component';
+import { GenerateImageComponent } from './components/modals/generate-image/generate-image.component';
+import { NavbarComponent } from './components/navbar/navbar.component';
 
 
 const routes: Routes = [
 	{ path: '', component: HomeComponent }
 ];
 
+const components =  [
+  AppComponent,
+  HomeComponent,
+  HeaderComponent,
+  SidebarComponent,
+  GenerateImageComponent,
+];
+
+const vendor_modules = [
+  MatInputModule,
+  MatButtonModule,
+  MatDialogModule,
+  MatSelectModule,
+  ColorPickerModule,
+];
+
+
 @NgModule({
   declarations: [
-    AppComponent,
-    HomeComponent,
-    HeaderComponent,
-    SidebarComponent,
-    GenerateImageDialogComponent,
+    components,
+    NavbarComponent
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
     FormsModule,
-
-    MatInputModule,
-    MatButtonModule,
-    MatDialogModule,
-    MatSelectModule,
-    ColorPickerModule,
-
     AppRoutingModule,
-   
     RouterModule.forRoot(routes),
+
+    vendor_modules
   ],
-  entryComponents: [GenerateImageDialogComponent],
+  entryComponents: [GenerateImageComponent],
   providers: [],
   bootstrap: [AppComponent]
 })

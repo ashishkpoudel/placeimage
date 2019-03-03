@@ -1,15 +1,15 @@
 import { Component, OnInit } from '@angular/core';
-import { Image } from '../../models/Image';
-import { ImageFormat } from '../../models/ImageFormat';
-import { ImageUrlGenerator } from '../../services/ImageUrlGenerator';
+import { Image } from 'src/app/models/image';
+import { ImageFormat } from 'src/app/models/image-format';
+import { ImageUrlGenerator } from 'src/app/services/image-url-generator';
 
 @Component({
-  selector: 'app-generate-image-dialog',
-  templateUrl: './generate-image-dialog.component.html',
-  styleUrls: ['./generate-image-dialog.component.css'],
+  selector: 'app-generate-image',
+  templateUrl: './generate-image.component.html',
+  styleUrls: ['./generate-image.component.css'],
   providers: [ImageUrlGenerator]
 })
-export class GenerateImageDialogComponent implements OnInit {
+export class GenerateImageComponent implements OnInit {
 
   image_url = '';
 

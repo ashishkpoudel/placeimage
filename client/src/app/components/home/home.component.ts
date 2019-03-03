@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import {MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material';
-import { GenerateImageDialogComponent } from '../generate-image-dialog/generate-image-dialog.component';
+import { MatDialog } from '@angular/material';
+import { GenerateImageComponent } from '../modals/generate-image/generate-image.component';
 
 @Component({
   selector: 'app-home',
@@ -16,7 +16,7 @@ export class HomeComponent implements OnInit {
   }
 
   handleClick() {
-    const dialogRef = this.dialog.open(GenerateImageDialogComponent, {
+    const dialogRef = this.dialog.open(GenerateImageComponent, {
       width: '480px',
       position: {
         top: '65px',

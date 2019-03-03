@@ -18,7 +18,7 @@
 }
 
 .section {
-	padding: 40px 0;
+	padding: 70px 0;
 	text-align: center;
 }
 
@@ -30,4 +30,8 @@
 	background: #ccc;
 	margin-top: 15px;
 	margin: 30px auto;
+}
+
+section.specify-size, section.background-text-color {
+	background-color: #f2f2f2;
 }

@@ -5,25 +5,72 @@
 </section>
 
 
-<div class="container">
+<div class="container-fluid">
 
 <section class="section intro row">
 	<div class="col-md-8 offset-md-2">
 		<h2 class="title">Using placeimage.app</h2>
 		<article>
 			<div>
-				Just specify the image size after our URL (https://placeimage.app/) and you’ll get a placeholder image. So the image URL should look this:-
+				Specify the image width and height <div style="background: #f2f2f2; border-radius: 4px; padding: 4px 8px; display: inline;">https://placeimage.app/{{"{width}"}}x{{"{height}"}}.png</div> and that's it
 			</div>
 			<div>
-				https://placeimage.app/300x300.png
+				Your image url should look like this https://placeimage.app/150x150.png
+			</div>
+			<div class="mt-5">
+				<img src="http://via.placeholder.com/150">
 			</div>
 		</article>
 	</div>
 </section>
 
-<section class="section intro row">
+<section class="section specify-size row">
 	<div class="col-md-8 offset-md-2">
-		<h2 class="title">About placeimage.app</h2>
+		<h2 class="title">width and height</h2>
+		<article>
+			<div>
+				You have to specify width first. Height is optional. In absence of height image will be in square.				
+			</div>
+			<div>
+				https://placeimage.app/300.png will produce an image of size 300x300
+			</div>
+			<div class="mt-5">
+				<img src="http://via.placeholder.com/150/200">
+			</div>
+		</article>
+	</div>
+</section>
+
+<section class="section image-format row">
+	<div class="col-md-8 offset-md-2">
+		<h2 class="title">image format</h2>
+		<article>
+			<div>
+				You can have image in 4 different format [ jpg, png, gif and wepb ]. 
+				Just add available extension after image size.
+				https://placeimage.app/300.jpg will have a resulting image in jpg format
+			</div>
+			<div class="mt-5 row d-flex justify-content-center">
+				<div class="col"> 
+					<img src="http://via.placeholder.com/100/100?text=jpg">
+				</div>
+				<div class="col">
+					<img src="http://via.placeholder.com/100/100?text=png">
+				</div>
+				<div class="col">
+					<img src="http://via.placeholder.com/100/100?text=gif">
+				</div>
+				<div class="col">
+					<img src="http://via.placeholder.com/100/100?text=wepb">
+				</div>
+			</div>
+		</article>
+	</div>
+</section>
+
+<section class="section background-text-color row">
+	<div class="col-md-8 offset-md-2">
+		<h2 class="title">custom text and size</h2>
 		<article>
 			<div>
 				Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
@@ -36,20 +83,7 @@
 
 <section class="section intro row">
 	<div class="col-md-8 offset-md-2">
-		<h2 class="title">About placeimage.app</h2>
-		<article>
-			<div>
-				Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-			</div>
-		</article>
-	</div>
-</section>
-
-<section class="section intro row">
-	<div class="col-md-8 offset-md-2">
-		<h2 class="title">About placeimage.app</h2>
+		<h2 class="title">foreground and background color</h2>
 		<article>
 			<div>
 				Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod

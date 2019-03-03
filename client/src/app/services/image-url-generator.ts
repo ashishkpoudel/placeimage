@@ -1,4 +1,4 @@
-import { Image } from '../models/Image';
+import { Image } from 'src/app/models/image';
 
 export class ImageUrlGenerator {
 
