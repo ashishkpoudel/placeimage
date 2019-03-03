@@ -18,7 +18,6 @@ import { HomeComponent } from './components/home/home.component';
 import { HeaderComponent } from './components/header/header.component';
 import { SidebarComponent } from './components/sidebar/sidebar.component';
 import { GenerateImageComponent } from './components/modals/generate-image/generate-image.component';
-import { NavbarComponent } from './components/navbar/navbar.component';
 
 
 const routes: Routes = [
@@ -45,7 +44,6 @@ const vendor_modules = [
 @NgModule({
   declarations: [
     components,
-    NavbarComponent
   ],
   imports: [
     BrowserModule,
