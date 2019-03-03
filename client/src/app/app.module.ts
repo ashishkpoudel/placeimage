@@ -18,10 +18,12 @@ import { HomeComponent } from './components/home/home.component';
 import { HeaderComponent } from './components/header/header.component';
 import { SidebarComponent } from './components/sidebar/sidebar.component';
 import { GenerateImageComponent } from './components/modals/generate-image/generate-image.component';
+import { ContactComponent } from './components/contact/contact.component';
 
 
 const routes: Routes = [
-	{ path: '', component: HomeComponent }
+  { path: '', component: HomeComponent },
+  { path: 'contact', 'component': ContactComponent }
 ];
 
 const components =  [
@@ -30,6 +32,7 @@ const components =  [
   HeaderComponent,
   SidebarComponent,
   GenerateImageComponent,
+  ContactComponent,
 ];
 
 const vendor_modules = [
