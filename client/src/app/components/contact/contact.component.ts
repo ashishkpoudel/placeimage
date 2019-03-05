@@ -41,7 +41,6 @@ export class ContactComponent implements OnInit {
       console.log(contact);
       alert(contact.first_name);
     });
-
   }
 
 }
