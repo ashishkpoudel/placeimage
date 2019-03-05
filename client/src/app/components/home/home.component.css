@@ -20,6 +20,7 @@
 .section {
 	padding: 70px 0;
 	text-align: center;
+	background: #fff;
 }
 
 .section .title::after {

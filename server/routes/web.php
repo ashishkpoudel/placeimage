@@ -48,3 +48,14 @@ $router->get('{width_raw}[/{height_raw}]', function($width_raw, $height_raw = nu
 
     return $response;
 });
+
+
+$router->post('contact', function(Request $request){
+    return response()->json([
+        'first_name' => 'ashish',
+        'sample' => 'sample data',
+        'last_name' => 'poudel',
+        'email' => 'ashish@gmail.com',
+        'message' => 'this is a text message'
+    ]);
+});
