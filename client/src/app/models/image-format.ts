@@ -1,4 +1,4 @@
-export interface ImageFormat {
+export class ImageFormat {
     value: string;
     viewValue: string;
   }

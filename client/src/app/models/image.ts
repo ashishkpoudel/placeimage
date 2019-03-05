@@ -1,4 +1,4 @@
-export interface Image {
+export class Image {
     width : number;
     height : number;
     format : string;
