@@ -1,4 +1,4 @@
 export class ImageFormat {
-    value: string;
-    viewValue: string;
-  }
+  value: string;
+  viewValue: string;
+}
