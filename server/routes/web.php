@@ -12,7 +12,7 @@
 */
 
 $router->get('/', function () use ($router) {
-    return '(-_-)';
+    return redirect()->to('https://placeimage.app');
 });
 
 
