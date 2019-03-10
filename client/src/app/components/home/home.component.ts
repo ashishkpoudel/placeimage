@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material';
 import { GenerateImageComponent } from '../modals/generate-image/generate-image.component';
+import { SEOService } from 'src/app/services/seo';
 
 @Component({
   selector: 'app-home',
@@ -9,7 +10,7 @@ import { GenerateImageComponent } from '../modals/generate-image/generate-image.
 })
 export class HomeComponent implements OnInit {
   
-  constructor(private dialog: MatDialog) { }
+  constructor(private dialog: MatDialog, private seo_service: SEOService) { }
 
   ngOnInit() {
 

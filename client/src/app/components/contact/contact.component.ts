@@ -41,6 +41,10 @@ export class ContactComponent implements OnInit {
       console.log(contact);
       alert(contact.first_name);
     });
+
+    alert('Thank you');
+    this.contact_form.reset();
+
   }
 
 }
