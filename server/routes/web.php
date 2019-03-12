@@ -17,7 +17,6 @@ $router->get('/', function () use ($router) {
 
 
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Response;
 
 $router->get('contact', function(Request $request){
     return response()->json([

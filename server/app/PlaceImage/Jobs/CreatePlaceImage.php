@@ -3,55 +3,83 @@
 namespace App\PlaceImage\Jobs;
 
 use App\Jobs\Job;
+use Illuminate\Http\Request;
+use Image;
 
 final class CreatePlaceImage extends Job
 {
-    private $input;
+    private $width;
+    private $height;
+    private $background;
+    private $foreground;
+    private $text;
 
-    public function __construct(string $input)
+    public function __construct(array $attributes = [])
     {
-        $this->input = $input;
+        $this->width = (int) $attributes['width'];
+        $this->height = (int) $attributes['height'];
+        $this->background = $attributes['background'];
+        $this->foreground = $attributes['foreground'];
+        $this->text = $attributes['text'];
     }
 
-    public static function fromString(string $input)
+    public static function fromRequest(string $input_raw, Request $request)
     {
-        return new static($input);
+        $width = null;
+        $height = null;
+        $background = null;
+        $foreground = null;
+        $text = null;
+
+        $input_raw_array = explode('/', $input_raw);
+
+        if (isset($input_raw_array[0])) {
+          $width_height_array = explode('x', $input_raw_array[0]);
+          
+          if (count($width_height_array) === 2) {
+            $width = $width_height_array[0];
+            $height = $width_height_array[1];
+          } else {
+            $width = $height = $width_height_array[0];
+          }
+        }
+
+        $background = isset($input_raw_array[1]) ? $input_raw_array[1] : '#cccc';
+        $foreground = isset($input_raw_array[2]) ? $input_raw_array[2] : '#A0A0A0';
+
+        $text = $request->has('text')
+            ? $request->input('text')
+            : ($width && $height ? "{$width} x {$height}" : "{$width} x {$width}");
+
+        return new static([
+            'width' => $width,
+            'height' => $height,
+            'background' => $background,
+            'foreground' => $foreground,
+            'text' => $text
+        ]);
+
     }
 
     public function handle()
     {
-        /* 
-        $router->get('{width_raw}[/{height_raw}]', function($width_raw, $height_raw = null, Request $request){
-    
-        $width = $width_raw;
-        $height = ($height_raw > 0)
-            ? $height_raw 
-            : $width_raw;
+        $canvas = Image::canvas($this->width, $this->height, $this->background);
 
-        $canvas = Image::canvas($width, $height, '#cccc');
-
-        $font_size = 16;
+        $font_size = 17;
         
-        $pos_x = ($width/2);
-        $pos_y = ($height/2) - ($font_size/2);
+        $pos_x = ($this->width/2);
+        $pos_y = ($this->height/2) - ($font_size/2);
 
-        $canvas_text = $request->input('text') ?: "{$width} x {$height}";
+        $foreground = $this->foreground;
 
-        $canvas->text($canvas_text, $pos_x, $pos_y, function($text) use ($font_size) {
+        $canvas->text($this->text, $pos_x, $pos_y, function($text) use ($font_size, $foreground) {
             $text->file('./static/fonts/ubuntu/Ubuntu-R.ttf');
             $text->size($font_size);
-            $text->color('#A0A0A0');
+            $text->color($foreground);
             $text->valign('top');
             $text->align('center');
         });
 
-        $response = Response::make($canvas->encode('jpg'));
-        $response->header('Content-Type', 'jpg');
-
-        dd('exec');
-
-        */
-
-        return 'asdsd';
+        return $canvas->encode('jpg');
     }
 }
