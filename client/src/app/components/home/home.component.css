@@ -1,7 +1,7 @@
 
 .hero {
 	padding: 70px 0px;
-	background-color: #3f51b5;
+	background-color: #363636;
 	text-align: center;
 }
 
@@ -13,7 +13,7 @@
 
 .hero h2 {
 	font-size: 15px;
-	color: #fff;
+	color: rgba(245, 245, 245, 0.9);
 	margin-bottom: 40px;
 }
 
@@ -35,4 +35,12 @@
 
 section.specify-size, section.background-text-color {
 	background-color: #f2f2f2;
+}
+
+.placeimage-url-highlight {
+	background: #f2f2f2; 
+	border-radius: 4px; 
+	padding: 2px 8px; 
+	display: inline;
+	border: 1px solid #fff;
 }

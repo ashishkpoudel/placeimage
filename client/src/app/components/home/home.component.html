@@ -9,16 +9,16 @@
 
 <section class="section intro row">
 	<div class="col-md-8 offset-md-2">
-		<h2 class="title">Using placeimage.app</h2>
+		<h2 class="title">using placeimage.app</h2>
 		<article>
 			<div>
-				Specify the image width and height <div style="background: #f2f2f2; border-radius: 4px; padding: 4px 8px; display: inline;">https://placeimage.app/{{"{width}"}}x{{"{height}"}}</div> and that's it
+				Specify the image width and height <div class="placeimage-url-highlight">https://via.placeimage.app/{{"{width}"}}x{{"{height}"}}</div> and that's it
 			</div>
 			<div>
-				Your image url should look like this https://placeimage.app/150x150.png
+				Your image url should look like this https://via.placeimage.app/150x150
 			</div>
 			<div class="mt-5">
-				<img src="http://via.placeholder.com/150">
+				<img src="https://via.placeimage.app/150x150">
 			</div>
 		</article>
 	</div>
@@ -32,10 +32,10 @@
 				You have to specify width first. Height is optional. In absence of height image will be in square.				
 			</div>
 			<div>
-				https://placeimage.app/150 will produce an image of size 150x150
+				<div class="placeimage-url-highlight">https://via.placeimage.app/150</div> will produce an image of size 150x150
 			</div>
 			<div class="mt-5">
-				<img src="http://via.placeholder.com/150">
+				<img src="https://via.placeimage.app/150">
 			</div>
 		</article>
 	</div>
@@ -48,24 +48,24 @@
 			<div>
 				You can have image in 4 different format [ jpg, png, gif and wepb ]. 
 				Just add available extension after image size.
-				https://placeimage.app/300.jpg will have a resulting image in jpg format
+				<div class="placeimage-url-highlight">https://via.placeimage.app/300.jpg</div> will have a resulting image in jpg format
 			</div>
 			<div class="mt-5">
 			<div class="row d-flex justify-content-center">
 				<div class="col mb-4"> 
-					<img src="http://via.placeholder.com/100" class="img-fluid mb-2">
+					<img src="https://via.placeimage.app/100" class="img-fluid mb-2">
 					<div style="color: #B8B8B8; text-transform: uppercase; font-size: 14px;">Jpg</div>
 				</div>
 				<div class="col mb-4">
-					<img src="http://via.placeholder.com/100" class="img-fluid mb-2">
+					<img src="https://via.placeimage.app/100" class="img-fluid mb-2">
 					<div style="color: #B8B8B8; text-transform: uppercase; font-size: 14px;">Png</div>
 				</div>
 				<div class="col mb-4">
-					<img src="http://via.placeholder.com/100" class="img-fluid mb-2">
+					<img src="https://via.placeimage.app/100" class="img-fluid mb-2">
 					<div style="color: #B8B8B8; text-transform: uppercase; font-size: 14px;">Gif</div>
 				</div>
 				<div class="col mb-4">
-					<img src="http://via.placeholder.com/100" class="img-fluid mb-2">
+					<img src="https://via.placeimage.app/100" class="img-fluid mb-2">
 					<div style="color: #B8B8B8; text-transform: uppercase; font-size: 14px;">Wepb</div>
 				</div>
 			</div>
@@ -79,11 +79,11 @@
 		<h2 class="title">custom text</h2>
 		<article>
 			<div>
-				adding text to placeimage is very easy and straight forward, just follow the given example: https://via.placeholder.com/300x100?text=custom text
+				adding text to placeimage is very easy and straight forward, just follow the given example: <div class="placeimage-url-highlight">https://via.placeimage.app/300x100?text=custom text</div>
 			</div>
 			<div class="mt-5 row d-flex justify-content-center">
 				<div class="col"> 
-					<img src="http://via.placeholder.com/300x100?text=custom text">
+					<img src="https://via.placeimage.app/300x100?text=custom text">
 				</div>
 			</div>
 		</article>
@@ -92,15 +92,28 @@
 
 <section class="section intro row">
 	<div class="col-md-8 offset-md-2">
-		<h2 class="title">foreground and background color</h2>
+		<h2 class="title">background and font color</h2>
 		<article>
 			<div>
-				Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+				easily customize background and font color by using url in the format below
+				<br>
+				<div class="placeimage-url-highlight">https://via.placeimage.app/{{"{background}"}}/{{"{foreground}"}}/150</div>
+				<br>
+				<div class="placeimage-url-highlight">https://via.placeimage.app/{{"{background}"}}/{{"{foreground}"}}/150?text=customtext</div>
+			</div>
+			<div class="mt-5 row d-flex justify-content-center">
+				<div class="col"> 
+					<img src="https://via.placeimage.app/150/993333/ffff">
+				</div>
 			</div>
 		</article>
 	</div>
 </section>
 
 </div>
+
+<footer style="padding: 20px; background-color: #fff; border-top: 1px solid #f0f0f0;">
+	<div class="container">
+		© 2019 Placeimage.app
+	</div>
+</footer>
