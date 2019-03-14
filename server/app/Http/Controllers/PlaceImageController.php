@@ -6,6 +6,8 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Response;
 use App\PlaceImage\Exceptions\CreatePlaceImageError;
 use App\PlaceImage\Jobs\CreatePlaceImage;
+use App\asdiahsd\asd;
+
 
 class PlaceImageController extends Controller
 {
