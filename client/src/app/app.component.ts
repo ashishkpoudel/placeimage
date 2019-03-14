@@ -1,4 +1,8 @@
 import { Component } from '@angular/core';
+import { Router, NavigationEnd } from '@angular/router';
+import { filter } from 'rxjs/operators';
+
+declare var gtag;
 
 @Component({
   selector: 'app-root',
@@ -6,5 +10,15 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'ngclient';
+  constructor(router: Router) {
+  	const navEndEvents = router.events.pipe(
+  		filter(event => event instanceof NavigationEnd)
+  	);
+
+  	navEndEvents.subscribe((event: NavigationEnd) => {
+  		gtag('config', 'UA-136259119-1', {
+  			'page_path': event.urlAfterRedirects
+  		});
+  	});
+  }
 }
