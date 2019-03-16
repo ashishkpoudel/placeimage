@@ -3,12 +3,18 @@ import { Image } from 'src/app/models/image';
 export class ImageUrlGenerator {
 
     generate(image: Image): string {
-        let base_url = 'https://placeimage.app';
 
-        if (image.width) {
-            base_url += image.width;
-        }
+    	let url = 'https://use.placeimage.app/' 
+    		+ image.width 
+    		+ 'x' 
+    		+ image.height 
+    		+ '.' 
+    		+ image.format;
 
-        return base_url;
+    	if (image.text) {
+    		url = url + '&text=' + image.text;
+    	}
+
+        return url;
     }
 }

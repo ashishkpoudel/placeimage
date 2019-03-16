@@ -2,4 +2,4 @@
 
 namespace App\PlaceImage\Exceptions;
 
-class CreatePlaceImageError extends \Exceptions { }
+class CreatePlaceImageError extends \Exception { }

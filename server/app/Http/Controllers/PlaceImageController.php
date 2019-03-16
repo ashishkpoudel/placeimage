@@ -6,17 +6,21 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Response;
 use App\PlaceImage\Exceptions\CreatePlaceImageError;
 use App\PlaceImage\Jobs\CreatePlaceImage;
-use App\asdiahsd\asd;
-
 
 class PlaceImageController extends Controller
 {
-	public function __invoke(Request $request, $input_raw)
+	public function __invoke($input_raw, Request $request)
 	{
-		$encoded_image = $this->dispatchNow(CreatePlaceImage::fromRequest($input_raw, $request));
-		$response = Response::make($encoded_image);
-        $response->header('Content-Type', 'jpg');
+		try {
+			$encoded_image = $this->dispatchNow(CreatePlaceImage::fromRequest($input_raw, $request));
 
-        return $response;
+			$response = Response::make($encoded_image);
+			$response->header('Content-Type', $encoded_image->mime);
+
+			return $response;
+
+		} catch (CreatePlaceImageError $exception) {
+			return $exception->getMessage();
+		}
 	}
 }

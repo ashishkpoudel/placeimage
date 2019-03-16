@@ -11,13 +11,13 @@ import { ImageUrlGenerator } from 'src/app/services/image-url-generator';
 })
 export class GenerateImageComponent implements OnInit {
 
-  image_url = '';
+  placeimage_url = 'sadasdi';
 
   image: Image = {
     width: 200,
     height: 200,
     format: 'jpg',
-    font_size: 16
+    text: ''
   };
 
   image_formats: ImageFormat[] = [
@@ -28,11 +28,11 @@ export class GenerateImageComponent implements OnInit {
   constructor(private image_url_generator: ImageUrlGenerator) { }
 
   ngOnInit() {
+    this.placeimage_url = this.image_url_generator.generate(this.image);
   }
 
-  handleCreate() {
-    let image_url = this.image_url_generator.generate(this.image);
-    alert(image_url);
+  handleGenerate() {
+    this.placeimage_url = this.image_url_generator.generate(this.image);
   }
 
 }
