@@ -12,7 +12,7 @@ export class ImageUrlGenerator {
     		+ image.format;
 
     	if (image.text) {
-    		url = url + '&text=' + image.text;
+    		url = url + '?text=' + image.text;
     	}
 
         return url;
