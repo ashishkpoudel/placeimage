@@ -27,4 +27,4 @@ $router->get('contact', function(Request $request){
     ]);
 });
 
-$router->get('{input_raw}', 'PlaceImageController');
+$router->get('/{route:.*}', 'PlaceImageController');
