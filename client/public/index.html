@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Placeimage.app - Image placeholder</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="description" content="Image placeholder - JPG, PNG, GIF, WEPB">
+        <meta name="keywords" content="image placeholder,dummy images,image,fake image generator">
+        <meta property="og:url" content="https://placeimage.app">
+        <meta name="author" content="Ashish K. Poudel">
+        <link href="./static/css/app.css" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+    </head>
+    <body>
+
+        <nav>
+            <div class="container mx-auto flex justify-between items-center px-2">
+                <span><a href=""><img class="inline-block h-8" src="./static/image/nav-primary-logo.png" alt="placeimage logo"></a></span>
+                <span><a class="text-base inline-block text-black px-2 py-4" target="_blank" href="https://github.com/ashishkpoudel/placeimage">Github</a></span>
+            </div>
+        </nav>
+
+        <section class="section-hero py-24 text-center bg-gray-900">
+            <h1 class="text-3xl md:text-5xl px-16 text-white font-bold pb-5 leading-tight sm:leading-none">Easy image placeholder service</h1>
+            <p class="text-white text-lg pb-12">Quick and easy Lorem ipsum for images</p>
+            <div class="text-center">
+                <div><img class="h-6 inline opacity-50" src="./static/image/arrow-down.png"></div>
+            </div>
+        </section>
+       
+        <div>
+        <section class="section section-intro px-2 py-24 text-center">
+            <div class="flex">
+                <div class="w-full sm:w-1/2 mx-auto">
+                    <h2 class="text-gray-800 font-bold text-2xl pb-4">how to placeimage</h2>
+                    <p class="text-gray-800 pb-12">
+                        Specify the image width and height <span class="bg-gray-200 p-1 rounded">https://use.placeimage.app/{width}x{height}</span> and that's it
+                        Your image url should look like this https://use.placeimage.app/150x150
+                    </p>
+                    <div>
+                        <img class="inline" src="https://use.placeimage.app/150x150">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section section-width-height px-2 py-24 text-center bg-gray-100">
+            <div class="flex">
+                <div class="w-full sm:w-1/2 mx-auto">
+                    <h2 class="text-gray-800 font-bold text-2xl pb-4">width and height</h2>
+                    <p class="text-gray-800 pb-12">
+                        You have to specify width first. Height is optional. In absence of height image will be in square.
+                        <span class="bg-gray-200 p-1 rounded">https://use.placeimage.app/150</span> will produce an image of size 150x150                            
+                    </p>
+                    <div>
+                        <img class="inline" src="https://use.placeimage.app/150x150">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section section-image-format px-2 py-24 text-center">
+            <div class="flex">
+                <div class="w-full sm:w-1/2 mx-auto">
+                    <h2 class="text-gray-800 font-bold text-2xl pb-4">image format</h2>
+                    <p class="text-gray-800 pb-12">
+                        You can have image in 4 different format [ jpg, png, gif and wepb ]. 
+                        Just add available extension after image size. 
+                        <span class="bg-gray-200 p-1 rounded">https://use.placeimage.app/300.jpg</span> will have a resulting image in jpg format
+                    </p>
+                    <div class="flex">
+                        <div class="w-1/4 p-1"><img class="inline" src="https://use.placeimage.app/100"><div class="text-gray-400 mt-2">JPG</div></div>
+                        <div class="w-1/4 p-1"><img class="inline" src="https://use.placeimage.app/100"><div class="text-gray-400 mt-2">PNG</div></div>
+                        <div class="w-1/4 p-1"><img class="inline" src="https://use.placeimage.app/100"><div class="text-gray-400 mt-2">GIF</div></div>
+                        <div class="w-1/4 p-1"><img class="inline" src="https://use.placeimage.app/100"><div class="text-gray-400 mt-2">WEPB</div></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section section-custom-text px-2 py-24 text-center bg-gray-100">
+            <div class="flex">
+                <div class="w-full sm:w-1/2 mx-auto">
+                    <h2 class="text-gray-800 font-bold text-2xl pb-4">custom text</h2>
+                    <p class="text-gray-800 pb-12">
+                        adding text to placeimage is very easy and straight forward, just follow the given example: 
+                        <span class="bg-gray-200 p-1 rounded">https://use.placeimage.app/300x100?text=custom text</span>
+                    </p>
+                    <div>
+                        <img class="inline" src="https://use.placeimage.app/300x100?text=custom text">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section section-foreground-background px-2 py-24 text-center">
+            <div class="flex">
+                <div class="w-full sm:w-1/2 mx-auto">
+                    <h2 class="text-gray-800 font-bold text-2xl pb-2">background and font color</h2>
+                    <p class="text-gray-800 pb-12">
+                        easily customize background and font color by using url in the format below 
+                        <span class="inline bg-gray-200 p-1 rounded border-white border-2">https://use.placeimage.app/150/{background}/{foreground}</span>
+                        <span class="inline bg-gray-200 p-1 rounded border-white border-2">https://use.placeimage.app/150/{background}/{foreground}?text=customtext</span>
+                    </p>
+                    <div>
+                        <img class="inline" src="https://use.placeimage.app/150/993333/ffff">
+                    </div>
+                </div>
+            </div>
+        </section>
+        </div>
+
+        <footer class="border-t-2 border-gray-200 p-5 border-t-2 text-gray-700 text-center">
+            © 2019 Placeimage.app - Created by Ashish K. Poudel <a target="_blank" href="https://twitter.com/ashishkpoudel"><img class="inline ml-1 h-3 opacity-75" src="./static/image/external-link.png"></a>
+        </footer>
+
+    </body>
+</html>

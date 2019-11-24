@@ -1,0 +1,28 @@
+@tailwind base;
+
+@tailwind components;
+
+@tailwind utilities;
+
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.8em;
+}
+
+.section h2::after {
+    content: "\00a0";
+    display: block;
+    width: 10%;
+    height: 2px;
+    background: #ccc;
+    margin: 30px auto;
+}
+
+.section {
+    word-wrap: break-word;
+}
+
+.arrow-bottom {
+    background:url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAiIGhlaWdodD0iMTAiIHZpZXdCb3g9IjAgMCAxMCAxMCIgZmlsbD0ibm9uZSI+PHBhdGggZD0iTTUgN0wxIDNIOUw1IDdaIiBmaWxsPSJ3aGl0ZSIvPjwvc3ZnPg==") no-repeat scroll 0 0 transparent;
+    height: 20px;
+}
